@@ -1,14 +1,14 @@
 <p align="center">
-  <img src="art/logo.png" height="100px"/>
+  <img src="https://raw.githubusercontent.com/siddharthkp/github-build/master/art/logo.png" height="100px"/>
   <br><br>
   <b>Github builds/checks for CI</b>
   <br><br>
-  
+
 </p>
 <p>
-  <img src="art/commit.png" height="200px"/>
+  <img src="https://raw.githubusercontent.com/siddharthkp/github-build/master/art/commit.png" height="200px"/>
   <br>
-  <img src="art/pull_request.png" height="250px"/>
+  <img src="https://raw.githubusercontent.com/siddharthkp/github-build/master/art/pull_request.png" height="250px"/>
 </p>
 
 &nbsp;
