@@ -38,14 +38,21 @@ const data = {
   url: 'http://my-ci-service.com/builds/1', // details url
 }
 
-const build = new Build(data) // get a new build
+/* Create a build */
+const build = new Build(data)
 
-build.start() // add a status with state pending (returns a promise)
+/* When you call start, a pending status get's added on github (returns a promise) */
+build.start()
 
-build.pass() // mark build as passed (returns a promise)
+/* Run your tests */
 
-build.fail() // mark build as failed (returns a promise)
+/* If things go well, call pass, it will mark change the status to success ✅ (returns a promise) */
+build.pass()
 
+/* Or if the tests fail, mark this build as failed ❌ (returns a promise) */
+build.fail()
+
+/* If you could not run the tests because of incorrect config, just error out the build (returns a promise) */
 build.error() // use when build errors out (returns a promise)
 
 ```
