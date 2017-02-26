@@ -4,9 +4,15 @@
   "description": "Github builds/checks for CI",
   "main": "index.js",
   "keywords": ["github", "build", "checks", "ci"],
+  "homepage": "https://github.com/siddharthkp/github-build",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siddharthkp/github-build.git"
+  },
   "author": "siddharthkp",
   "license": "MIT",
   "dependencies": {
     "axios": "0.15.3"
-  }
+  },
+  "files": ["index.js"]
 }
