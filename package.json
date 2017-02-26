@@ -1,0 +1,12 @@
+{
+  "name": "github-build",
+  "version": "1.0.0",
+  "description": "Github builds/checks for CI",
+  "main": "index.js",
+  "keywords": ["github", "build", "checks", "ci"],
+  "author": "siddharthkp",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "0.15.3"
+  }
+}
