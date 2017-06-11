@@ -1,4 +1,4 @@
-const Build = require('github-build')
+const Build = require('./index')
 
 const data = {
   repo: process.env.TRAVIS_REPO_SLUG,

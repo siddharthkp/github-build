@@ -3,6 +3,9 @@
   "version": "1.1.0",
   "description": "Github builds/checks for CI",
   "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
   "keywords": [
     "github",
     "build",
