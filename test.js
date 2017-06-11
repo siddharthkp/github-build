@@ -10,4 +10,4 @@ const data = {
 
 const build = new Build(data)
 build.start()
-build.pass('Tests passed!')
+setTimeout(() => build.pass('Tests passed!'), 5000)
