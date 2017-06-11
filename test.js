@@ -5,8 +5,7 @@ const data = {
   sha: process.env.TRAVIS_PULL_REQUEST_SHA,
   token: process.env.github_token,
   label: 'github-build',
-  description: 'Running some tests',
-  url: 'http://my-ci-service.com/builds/1'
+  description: 'Running some tests'
 }
 
 const build = new Build(data)
