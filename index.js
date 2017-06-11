@@ -6,7 +6,7 @@ class Build {
     meta.target_url = meta.url
     this.meta = meta
   }
-  start () {return update(this.meta, 'pending')}
+  start (message) {return update(this.meta, message, 'pending')}
   pass  (message) {return update(this.meta, message, 'success')}
   fail  (message) {return update(this.meta, message, 'failure')}
   error (message) {return update(this.meta, message, 'error')}
