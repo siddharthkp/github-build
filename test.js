@@ -12,3 +12,9 @@ const data = {
 const build = new Build(data)
 build.start()
 setTimeout(() => build.pass('Tests passed!', 'https://example.com'), 5000)
+
+process.on('unhandledRejection', (reason, p) => {
+  console.log('Unhandled Promise: ')
+  console.log(reason, p)
+  process.exit(1)
+})

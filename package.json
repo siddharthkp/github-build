@@ -4,7 +4,7 @@
   "description": "Github builds/checks for CI",
   "main": "index.js",
   "scripts": {
-    "test": "node test || exit 1"
+    "test": "node test"
   },
   "keywords": [
     "github",
