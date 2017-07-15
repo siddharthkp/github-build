@@ -6,20 +6,20 @@ class Build {
     meta.target_url = meta.url
     this.meta = meta
   }
-  start (message) {return update(this.meta, message, 'pending')}
-  pass  (message) {return update(this.meta, message, 'success')}
-  fail  (message) {return update(this.meta, message, 'failure')}
-  error (message) {return update(this.meta, message, 'error')}
+  start (message, url) {return update(this.meta, message, url, 'pending')}
+  pass  (message, url) {return update(this.meta, message, url, 'success')}
+  fail  (message, url) {return update(this.meta, message, url, 'failure')}
+  error (message, url) {return update(this.meta, message, url, 'error')}
 }
 
-const update = (build, message, status) => new Promise((resolve, reject) => {
+const update = (build, message, url, status) => new Promise((resolve, reject) => {
   axios({
     method: 'POST',
     url: `https://api.github.com/repos/${build.repo}/statuses/${build.sha}`,
     responseType: 'json',
     data: {
       state: status,
-      target_url: build.url,
+      target_url: url || build.url,
       description: message || build.description,
       context: build.context
     },
