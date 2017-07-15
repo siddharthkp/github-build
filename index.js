@@ -19,7 +19,7 @@ const update = (build, message, url, status) => new Promise((resolve, reject) =>
     responseType: 'json',
     data: {
       state: status,
-      target_url: url || meta.url,
+      target_url: url || build.url,
       description: message || build.description,
       context: build.context
     },
