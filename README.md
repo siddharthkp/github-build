@@ -30,6 +30,8 @@ npm install github-build --save
 const Build = require('github-build')
 
 const data = {
+  domain: 'https://my.github.com/api/', // optional: your github domain, defaults to 'https://api.github.com/'
+  prefix: 'path/to/', // optional: your github path, defaults to 'repos/'
   repo: 'siddharthkp/github-build', // (author/repo)
   sha: '6954e71d46be1ae9b0529aae6e00b64d7a1023d4', // (commit sha)
   token: 'secret', // (github oauth token: https://developer.github.com/v3/oauth)
@@ -59,10 +61,10 @@ build.error() // use when build errors out (returns a promise)
 
 &nbsp;
 
-If you like it then [you should put a ⭐️ on it](https://www.youtube.com/watch?v=4m1EFMoRFvY)
+If you like it then [you should put a ⭐️ on it](https://www.youtube.com/watch?v=4m1EFMoRFvY)!
 
 &nbsp;
 
 #### License
 
-MIT © siddharthkp
+MIT © [siddharthkp](https://github.com/siddharthkp)
