@@ -13,9 +13,14 @@ class Build {
 }
 
 const update = (build, message, url, status) => new Promise((resolve, reject) => {
+  const GH_DOMAIN = build.domain || 'https://api.github.com/';
+  const GH_PREFIX = build.prefix || 'repos/';
+
+  const GH_URL = `${GH_DOMAIN}${GH_PREFIX}${build.repo}/statuses/${build.sha}`;
+
   axios({
     method: 'POST',
-    url: `https://api.github.com/repos/${build.repo}/statuses/${build.sha}`,
+    url: GH_URL,
     responseType: 'json',
     data: {
       state: status,
