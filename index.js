@@ -18,8 +18,6 @@ const update = (build, message, url, status) => new Promise((resolve, reject) =>
 
   const GH_URL = `${GH_DOMAIN}${GH_PREFIX}${build.repo}/statuses/${build.sha}`;
 
-  console.log('GH_URL', GH_URL);
-
   axios({
     method: 'POST',
     url: GH_URL,
