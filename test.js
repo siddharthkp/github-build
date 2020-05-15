@@ -2,7 +2,7 @@ const Build = require('./index')
 
 const data = {
   repo: process.env.TRAVIS_PULL_REQUEST_SLUG || process.env.TRAVIS_REPO_SLUG || 'siddharthkp/github-build',
-  sha: process.env.TRAVIS_PULL_REQUEST_SHA ||
+  sha: process.env.TRAVIS_PULL_REQUEST_SHA || process.env.TRAVIS_COMMIT ||
     '4391039e9c506a1702ee7971cda4613ca5da2d69',
   token: process.env.github_token,
   label: 'github-build',
