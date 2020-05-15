@@ -1,4 +1,6 @@
 const axios = require('axios')
+const path = require('path')
+const urlModule = require('url')
 
 class Build {
   constructor(meta) {
@@ -16,7 +18,9 @@ const update = (build, message, url, status) => new Promise((resolve, reject) =>
   const GH_DOMAIN = build.domain || 'https://api.github.com/';
   const GH_PREFIX = build.prefix || 'repos/';
 
-  const GH_URL = `${GH_DOMAIN}${GH_PREFIX}${build.repo}/statuses/${build.sha}`;
+  const relativePath = path.join(GH_PREFIX, build.repo, 'statuses', build.sha)
+
+  const GH_URL = urlModule.resolve(GH_DOMAIN, relativePath);
 
   axios({
     method: 'POST',
