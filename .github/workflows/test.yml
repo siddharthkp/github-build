@@ -18,4 +18,4 @@ jobs:
       with:
         cache: 'npm'
     - run: npm ci
-    - run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} npm test
+    - run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} SHA=${{github.sha}} npm test
