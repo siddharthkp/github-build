@@ -1,0 +1,21 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup node
+      uses: actions/setup-node@v3
+      with:
+        cache: 'npm'
+    - run: npm ci
+    - run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} SHA=${{github.sha}} npm test
