@@ -20,7 +20,7 @@
   "author": "siddharthkp",
   "license": "MIT",
   "dependencies": {
-    "axios": "0.21.3"
+    "axios": "1.6.0"
   },
   "files": [
     "index.js"
