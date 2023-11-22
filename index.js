@@ -12,10 +12,12 @@ class Build {
   error (message, url) {return update(this.meta, message, url, 'error')}
 }
 
+const default_git_url = "https://api.github.com"
+
 const update = (build, message, url, status) => new Promise((resolve, reject) => {
   axios({
     method: 'POST',
-    url: `https://api.github.com/repos/${build.repo}/statuses/${build.sha}`,
+    url: `${build.ghe ? `${build.ghe}/api/v3` : default_git_url }/repos/${build.repo}/statuses/${build.sha}`,
     responseType: 'json',
     data: {
       state: status,
